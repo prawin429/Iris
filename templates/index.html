@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Predict Species</title>
+    <style type="text/css" media="screen">
+        h1 {color: #C3447A;}
+        h3 {color: darkviolet;}
+        p {color:blue;}
+        h2 {color:green;}
+        footer {color:blue;}
+        footer {text-align: center;}
+        h1 {text-align: center;}
+        h3 {text-align: center;}
+        h2 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+    </style>    
+    </head>  
+    <body style="background-color:powderblue;">
+    <h1>Hello, Wellcome to My Page...!</h1>
+    <h3>Have Nice Day...!</h3>
+    <h2>Predict Your Iris Species:</h2>
+    <p>Iris Types: 1)Iris-Setosa, 2)Iris-Versicolor, 3)Iris-Virginica.</p>
+    <div>
+    <form action="/predict" method="POST">
+        <input type="text" name="spl" placeholder='Sepel Length(CM)'><br>
+        <input type="text" name="spw" placeholder='Sepel Width(CM)'><br>
+        <input type="text" name="ptl" placeholder='Petal Length(CM)'><br>
+        <input type="text" name="ptw" placeholder='Sepel Width(CM)'><br>
+
+        <button class='btn btn-success'>Predict</button>
+    </form>
+    <div class="row">
+            {% if prediction %}
+        <h2>Your Species is:</h2><h2 class="text-warning">{{prediction}}</h2>
+            {% endif %}
+            <image src="{{url_for('static',filename = 'images/iris.jfif')}}"  alt="Iris Image" face" width="95" height="80" align="center">
+    </div>
+    </div>
+    <marquee width="60%" direction="left" height="100px">
+        Contact: Email: praveenkumar429@outlook.com, Phone: +91- 8978464854.
+    </marquee>
+    <p>Thsis is a Sample Data Science Project</p>
+  <footer>Copyright@PraveenKumar.e  2022</footer>  
+  </body>
+</html>
